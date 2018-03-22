@@ -82,3 +82,35 @@ h1::first-letter,
 h2::first-letter, {
   text-transform: uppercase;
 }
+
+footer {
+ padding: calc(var(--space)*6);
+ margin-top: 30rem;
+ background: var(--gray-lighter);
+}
+
+footer p {
+ padding: calc(var(--space)*0);
+ font-family: var(--main-font-family);
+ font-size: 0.7vw;
+ font-weight: normal;
+ text-align: center;
+ text-transform: none;
+ text-decoration: none;
+ letter-spacing: 0.07rem;
+ color: var(--secondary-text);
+}
+
+footer p a {
+  font-size: inherit;
+}
+
+footer img {
+  width: 2.5rem;
+  margin-bottom: calc(var(--space)*2);
+  -webkit-transform: rotate(180deg);
+  -moz-transform: rotate(180deg);
+  -o-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  transform: rotate(180deg);
+}
