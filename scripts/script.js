@@ -37,9 +37,7 @@ function getPlayers(snapshot) {
   </article>
   `;
 
-  selName.innerHTML += `
-  <option value="${selName}">${playerName}</option>
-  `;
+  selName.innerHTML += `<option value="${selName}">${playerName}</option>`;
 };
 
 // listener function: get data from registered result
@@ -49,13 +47,16 @@ function regNewResults(event) {
 
   var regPoints = points.value;
   var theMatch = selMatch.value;
+  var thePlayer = selName.value;
 
   var newResult = {
+    "player" : thePlayer,
     "match" : theMatch,
     "score" : points.value
   };
 
   resultsDB.push(newResult);
+  points.value = "";
 };
 
 
