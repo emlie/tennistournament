@@ -80,6 +80,7 @@ h2 {
   color: var(--primary-text);
   grid-area: auto / span 2;
   border: 1px solid transparent;
+  padding-left: calc(var(--space)*1);
 }
 
 h3 {
@@ -87,7 +88,7 @@ h3 {
   font-size: 1vw;
   font-weight: var(--medium);
   text-align: left;
-  text-transform: none;
+  text-transform: capitalize;
   text-decoration: none;
   letter-spacing: 0.1rem;
   color: var(--almost-black);
@@ -181,15 +182,15 @@ nav button:active {
 
 main {
   display: grid;
-  grid-template: repeat(2, 1fr) / repeat(5, 1fr);
+  grid-template: auto / repeat(5, 1fr);
   grid-gap: 2rem;
   max-width: 85vw;
   height: auto;
   margin: 20rem auto 1rem auto;
-  padding-top: calc(var(--space)*0);
+  padding: 0;
   font-size: 6vw;
   transition: var(--smooth);
-  border: 1px solid cyan;
+  border: 1px solid transparent;
 }
 
 footer {
@@ -277,7 +278,7 @@ height: auto;
 margin: 0;
 font-size: 6vw;
 transition: var(--smooth);
-border: 1px solid red;
+border: 1px solid transparent;
 }
 
 .sorting {
