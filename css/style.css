@@ -88,14 +88,15 @@ h3 {
   font-size: 1vw;
   font-weight: var(--medium);
   text-align: left;
-  text-transform: capitalize;
+  text-transform: none;
   text-decoration: none;
   letter-spacing: 0.1rem;
   color: var(--almost-black);
 }
 
 h1::first-letter,
-h2::first-letter, {
+h2::first-letter,
+h3::first-letter {
   text-transform: uppercase;
 }
 
@@ -237,8 +238,20 @@ footer img {
   grid-template: auto / repeat(4, 1fr);
 }
 
+#regResults {
+  display: flex;
+  flex-flow: column;
+  align-items: flex-start;
+  align-content: center;
+  justify-content: center;
+}
 
 
+
+
+.extra-top-space {
+  margin-top: calc(var(--space)*1.2);
+}
 
 .content {
   width: 100%;
@@ -252,6 +265,7 @@ footer img {
 .content:hover {
   background: #fff;
   box-shadow: var(--smooth-shadow);
+  border-radius: 0.4rem;
 }
 
 .content img {
@@ -280,7 +294,7 @@ height: auto;
 margin-bottom: 10rem;
 font-size: 6vw;
 transition: var(--smooth);
-border: 1px solid cyan;
+border: 1px solid transparent;
 }
 
 .sorting {
@@ -315,7 +329,8 @@ border: 1px solid cyan;
   background: transparent;
 }
 
-.sorting button {
+.sorting button,
+.contentRight button {
   padding: calc(var(--space)*1);
   background: var(--gray-lighter);
   border: none;
@@ -323,17 +338,48 @@ border: 1px solid cyan;
   transition: var(--smooth);
 }
 
-.sorting button:hover {
+.sorting button:hover,
+.contentRight button:hover {
   background: pink;
   cursor: pointer;
 }
 
-.sorting button:active {
+.sorting button:active,
+.contentRight button:active {
   background: var(--gray-lightest);
 }
 
 .contentLeft {
-  grid-area: auto / span 3;
+  grid-area: auto / span 2;
   padding: 10rem;
   border: 1px solid orange;
+}
+
+.contentRight {
+  grid-area: auto / span 1;
+  padding-left: calc(var(--space)*8);
+  border: 1px solid orange;
+  font-family: var(--main-font-family);
+  font-size: 3vw;
+  font-weight: var(--normal);
+  text-align: left;
+  text-transform: capitalize;
+  text-decoration: none;
+  letter-spacing: 0.15rem;
+  color: var(--almost-black);
+}
+
+.contentRight div {
+  font-size: 1.3vw;
+}
+
+.contentRight label {
+  font-size: 1vw;
+}
+
+.contentRight select {
+  width: 100%;
+  margin-bottom: var(--space);
+  padding: calc(var(--space)*0.5);
+  font-size: 1vw;
 }

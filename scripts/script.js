@@ -3,10 +3,15 @@ var main = document.getElementById("main");
 var playersMainContent = document.getElementById("playersMainContent");
 var playersGallery = document.getElementById("playersGallery");
 var resultsTable = document.getElementById("resultsTable");
+var regResults = document.getElementById("regResults");
+var regResultsInp = document.getElementById("regResultsInp");
+var selMatch = document.getElementById("selMatch");
+var selName = document.getElementById("selName");
 
 // get databases from FB
 var database = firebase.database();
 var playersDB = database.ref("theTournament/players");
+var resultsDB = database.ref("theTournament/results");
 
 
 
@@ -24,17 +29,34 @@ function getPlayers(snapshot) {
 
   playersGallery.innerHTML += `
   <article class="content">
-  <img src="images/${playerImg}">
-  <h3>${playerName}</h3>
-  <p>${playerBday}</p>
-  <p>${playerGender}</p>
-  <p>${playerClub}</p>
+    <img src="images/${playerImg}">
+    <h3>${playerName}</h3>
+    <p>${playerBday}</p>
+    <p>${playerGender}</p>
+    <p>${playerClub}</p>
   </article>
+  `;
+
+  selName.innerHTML += `
+  <option value="${selName}">${playerName}</option>
   `;
 };
 
 // listener function: get data from registered result
+function regNewResults(event) {
+  console.log("testing regResults");
+  event.preventDefault();
 
+  var regPoints = points.value;
+  var theMatch = selMatch.value;
+
+  var newResult = {
+    "match" : theMatch,
+    "score" : points.value
+  };
+
+  resultsDB.push(newResult);
+};
 
 
 
@@ -88,4 +110,6 @@ function showContact() {
 
 
 // register listener functions
+regResults.onsubmit = regNewResults;
+
 playersDB.on("child_added", getPlayers);
