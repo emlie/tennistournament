@@ -1,0 +1,30 @@
+{
+  "theTournament" : {
+    "players" : {
+      "Marine Antunes" : {
+        "bday" : "27.08.01",
+        "gender" : "female",
+        "club" : "Jungholtz",
+        "img" : "kiki-siepel-412333-unsplash.jpg"
+      },
+      "Eva Albini" : {
+        "bday" : "12.03.01",
+        "gender" : "female",
+        "club" : "Blodelsheim",
+        "img" : "kiki-siepel-412333-unsplash.jpg"
+      },
+      "Valentin Apaydin" : {
+        "bday" : "20.04.00",
+        "gender" : "male",
+        "club" : "Colmar",
+        "img" : "kiki-siepel-412333-unsplash.jpg"
+      },
+      "Hugo Marmonier" : {
+        "bday" : "25.07.00",
+        "gender" : "male",
+        "club" : "Bergholtz",
+        "img" : "kiki-siepel-412333-unsplash.jpg"
+      }
+    }
+  }
+}

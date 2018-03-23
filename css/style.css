@@ -83,6 +83,97 @@ h2::first-letter, {
   text-transform: uppercase;
 }
 
+nav {
+  width: 100%;
+  margin-top: -20rem;
+  position: fixed;
+  z-index: 10000;
+  background: #fff;
+  transition: var(--smooth);
+  box-shadow: var(--smooth-shadow);
+}
+
+nav ul {
+  display: flex;
+  flex-flow: row;
+  align-items: flex-start;
+  align-content: flex-start;
+  justify-content: flex-start;
+  background: inherit;
+  font-family: var(--main-font-family);
+  font-size: 1.8vw;
+  font-weight: normal;
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: none;
+  letter-spacing: 0.15rem;
+  color: var(--almost-black);
+  list-style-type: none;
+  transition: var(--smooth);
+}
+
+nav ul li {
+  flex: 0.1 1 auto; /* grow shrink basis */
+  /* padding: 1.5rem 0 1.5rem 0; */
+  background: transparent;
+}
+
+nav ul li:first-child {
+  flex: 1 0 auto;
+  background: transparent;
+  margin-top: 1.5rem;
+}
+
+nav ul li:nth-child(2) {
+  flex: 12 1 auto;
+  background: transparent;
+}
+
+nav ul li a {
+  font-size: inherit;
+  text-decoration: inherit;
+  color: var(--almost-black);
+  transition: var(--smooth);
+}
+
+nav li a:hover {
+  color: var(--dark-primary-color);
+}
+
+nav ul li img {
+  width: 1.8rem;
+  margin-top: -0.5rem;
+  margin-right: 0.5rem;
+}
+
+nav button {
+  padding: calc(var(--space)*2);
+  background: transparent;
+  border: none;
+  transition: var(--smooth);
+}
+
+nav button:hover {
+  background: var(--gray-lightest);
+}
+
+nav button:active {
+  background: var(--gray-lighter);
+}
+
+main {
+  display: grid;
+  grid-template: repeat(2, 1fr) / repeat(4, 1fr);
+  grid-gap: 2rem;
+  max-width: 85vw;
+  height: auto;
+  margin: 20rem auto 1rem auto;
+  padding-top: calc(var(--space)*10);
+  font-size: 6vw;
+  transition: var(--smooth);
+  border: 1px solid cyan;
+}
+
 footer {
  padding: calc(var(--space)*6);
  margin-top: 30rem;
