@@ -8,19 +8,20 @@
   </head>
   <body>
 
-<script src="https://www.gstatic.com/firebasejs/4.12.0/firebase.js"></script>
-<script>
-  // Initialize Firebase
-  var config = {
-    apiKey: "AIzaSyBHFVN7vwJ1KvJ31qjvBhwTepjPDmLQiqs",
-    authDomain: "tennis-tournament-4877d.firebaseapp.com",
-    databaseURL: "https://tennis-tournament-4877d.firebaseio.com",
-    projectId: "tennis-tournament-4877d",
-    storageBucket: "tennis-tournament-4877d.appspot.com",
-    messagingSenderId: "233196095242"
-  };
-  firebase.initializeApp(config);
-</script>
+
+    <script src="https://www.gstatic.com/firebasejs/4.12.0/firebase.js"></script>
+    <script>
+      // Initialize Firebase
+      var config = {
+        apiKey: "AIzaSyBHFVN7vwJ1KvJ31qjvBhwTepjPDmLQiqs",
+        authDomain: "tennis-tournament-4877d.firebaseapp.com",
+        databaseURL: "https://tennis-tournament-4877d.firebaseio.com",
+        projectId: "tennis-tournament-4877d",
+        storageBucket: "tennis-tournament-4877d.appspot.com",
+        messagingSenderId: "233196095242"
+      };
+      firebase.initializeApp(config);
+    </script>
 
 
 
@@ -51,9 +52,16 @@
     </ul>
   </nav>
 
-<main>
 
+<main id="main">
+ <div id="playersMainContent" class="mainContent">
+   <div class="sorting">
+
+   </div>
+   <!-- fill via JS -->
+ </div>
 </main>
+
 
 <footer>
   <p>
