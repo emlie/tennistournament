@@ -1,6 +1,7 @@
 // get HTML elements
 var main = document.getElementById("main");
 var playersMainContent = document.getElementById("playersMainContent");
+var playersGallery = document.getElementById("playersGallery");
 
 // get databases from FB
 var database = firebase.database();
@@ -20,7 +21,7 @@ function getPlayers(snapshot) {
   var playerClub = playerInfo.club;
   var playerImg = playerInfo.img;
 
-  playersMainContent.innerHTML += `
+  playersGallery.innerHTML += `
   <article class="content">
   <img src="images/${playerImg}">
   <h3>${playerName}</h3>
@@ -42,12 +43,34 @@ function showInfo() {
 function showPlayers() {
   console.log("testing showPlayers");
 
-var x = playersMainContent;
+/*var x = playersMainContent;
   if (playersMainContent.style.display === "none") {
       playersMainContent.style.display == "block";
   } else {
       playersMainContent.style.display == "none";
-  }
+  }*/
+};
+
+function sortAll() {
+  console.log("testing sortAll");
+  playersGallery.innerHTML = "";
+  playersDB.on("child_added", getPlayers);
+}
+
+function sortFemales() {
+  console.log("testing sortFemales");
+  playersGallery.innerHTML = "";
+  playersDB.orderByChild("gender")
+           .equalTo("female")
+           .on("child_added", getPlayers);
+};
+
+function sortMales() {
+  console.log("testing sortMales");
+  playersGallery.innerHTML = "";
+  playersDB.orderByChild("gender")
+           .equalTo("male")
+           .on("child_added", getPlayers);
 };
 
 function showResults() {

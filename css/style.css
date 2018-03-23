@@ -73,11 +73,13 @@ h2 {
   font-family: var(--heading-font-serif-2);
   font-size: 5vw;
   font-weight: var(--light);
-  text-align: right;
+  text-align: left;
   text-transform: none;
   text-decoration: none;
   letter-spacing: 0.25rem;
   color: var(--primary-text);
+  grid-area: auto / span 2;
+  border: 1px solid transparent;
 }
 
 h3 {
@@ -225,7 +227,8 @@ footer img {
 
 
 
-#playersMainContent {
+#playersMainContent,
+#playersGallery {
   display: display;
   grid-area: auto / span 5;
   grid-template: auto / repeat(4, 1fr);
@@ -250,6 +253,7 @@ footer img {
 
 .content img {
   width: 100%;
+  border-radius: 0.4rem;
 }
 
 .content p {
@@ -274,4 +278,52 @@ margin: 0;
 font-size: 6vw;
 transition: var(--smooth);
 border: 1px solid red;
+}
+
+.sorting {
+  grid-area: auto / span 2;
+  border: 1px solid transparent;
+}
+
+.sorting ul {
+  padding-top: 5%;
+  display: flex;
+  flex-flow: row;
+  align-items: flex-end;
+  align-content: flex-end;
+  justify-content: flex-end;
+  background: inherit;
+  font-family: var(--main-font-family);
+  font-size: 1.8vw;
+  font-weight: normal;
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: none;
+  letter-spacing: 0.15rem;
+  color: var(--almost-black);
+  list-style-type: none;
+  transition: var(--smooth);
+}
+
+.sorting ul li {
+  flex: 0.1 1 auto; /* grow shrink basis */
+  /* padding: 1.5rem 0 1.5rem 0; */
+  background: transparent;
+}
+
+.sorting button {
+  padding: calc(var(--space)*1);
+  background: var(--gray-lighter);
+  border: none;
+  border-radius: 0.4rem;
+  transition: var(--smooth);
+}
+
+.sorting button:hover {
+  background: pink;
+  cursor: pointer;
+}
+
+.sorting button:active {
+  background: var(--gray-lightest);
 }

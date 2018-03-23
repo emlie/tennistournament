@@ -38,16 +38,16 @@
       </li>
       <li><!--empty filler--></li>
       <li>
-        <button type="button" name="button" onclick="showInfo()">info</button>
+        <button type="button" name="info" onclick="showInfo()">info</button>
       </li>
       <li>
-        <button type="button" name="button" onclick="showPlayers()">players</button>
+        <button type="button" name="players" onclick="showPlayers()">players</button>
       </li>
       <li>
-        <button type="button" name="button" onclick="showResults()">results</button>
+        <button type="button" name="results" onclick="showResults()">results</button>
       </li>
       <li>
-        <button type="button" name="button" onclick="showContact()">contact</button>
+        <button type="button" name="contact" onclick="showContact()">contact</button>
       </li>
     </ul>
   </nav>
@@ -55,10 +55,23 @@
 
 <main id="main">
  <div id="playersMainContent" class="mainContent">
+   <h2>Players</h2>
    <div class="sorting">
-
+     <ul>
+       <li>
+         <button type="button" name="sortAl" onclick="sortAll()">show all</button>
+       </li>
+       <li>
+         <button type="button" name="sortFemales" onclick="sortFemales()">show females</button>
+       </li>
+       <li>
+         <button type="button" name="sortMales" onclick="sortMales()">show males</button>
+       </li>
+     </ul>
    </div>
-   <!-- fill via JS -->
+   <div id="playersGallery" class="mainContent">
+     <!-- insert via JS -->
+   </div>
  </div>
 </main>
 
