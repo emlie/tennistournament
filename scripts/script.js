@@ -2,6 +2,7 @@
 var main = document.getElementById("main");
 var playersMainContent = document.getElementById("playersMainContent");
 var playersGallery = document.getElementById("playersGallery");
+var resultsTable = document.getElementById("resultsTable");
 
 // get databases from FB
 var database = firebase.database();
@@ -31,6 +32,8 @@ function getPlayers(snapshot) {
   </article>
   `;
 };
+
+// listener function: get data from registered result
 
 
 

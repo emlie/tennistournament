@@ -74,7 +74,7 @@ h2 {
   font-size: 5vw;
   font-weight: var(--light);
   text-align: left;
-  text-transform: none;
+  text-transform: capitalize;
   text-decoration: none;
   letter-spacing: 0.25rem;
   color: var(--primary-text);
@@ -227,8 +227,10 @@ footer img {
 
 
 
+#playersMainContent {
+  display: display;
+}
 
-#playersMainContent,
 #playersGallery {
   display: display;
   grid-area: auto / span 5;
@@ -269,16 +271,16 @@ footer img {
 }
 
 .mainContent {
-grid-area: auto / span 3;
+grid-area: auto / span 5;
 display: grid;
 grid-template: auto / repeat(3, 1fr);
 grid-gap: 2rem;
 max-width: 85vw;
 height: auto;
-margin: 0;
+margin-bottom: 10rem;
 font-size: 6vw;
 transition: var(--smooth);
-border: 1px solid transparent;
+border: 1px solid cyan;
 }
 
 .sorting {
@@ -287,7 +289,8 @@ border: 1px solid transparent;
 }
 
 .sorting ul {
-  padding-top: 5%;
+  margin-right: -2rem;
+  padding-top: 9.5%;
   display: flex;
   flex-flow: row;
   align-items: flex-end;
@@ -327,4 +330,10 @@ border: 1px solid transparent;
 
 .sorting button:active {
   background: var(--gray-lightest);
+}
+
+.contentLeft {
+  grid-area: auto / span 3;
+  padding: 10rem;
+  border: 1px solid orange;
 }

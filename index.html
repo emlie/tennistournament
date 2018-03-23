@@ -54,12 +54,27 @@
 
 
 <main id="main">
+
+  <div id="resultsMainContent" class="mainContent">
+    <h2>results</h2>
+    <div class="contentLeft">
+      <table id="resultsTable">
+        <!-- insert via JS -->
+      </table>
+    </div>
+    <div class="contentRight">
+      <form id="regResults" class="">
+        <label for=""></label>
+      </form>
+    </div>
+  </div>
+
  <div id="playersMainContent" class="mainContent">
-   <h2>Players</h2>
+   <h2>players</h2>
    <div class="sorting">
      <ul>
        <li>
-         <button type="button" name="sortAl" onclick="sortAll()">show all</button>
+         <button type="button" name="sortAll" onclick="sortAll()">show all</button>
        </li>
        <li>
          <button type="button" name="sortFemales" onclick="sortFemales()">show females</button>
@@ -72,7 +87,9 @@
    <div id="playersGallery" class="mainContent">
      <!-- insert via JS -->
    </div>
+
  </div>
+
 </main>
 
 
