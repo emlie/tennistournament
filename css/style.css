@@ -419,13 +419,13 @@ border: 1px solid transparent;
 
 .sorting button:hover,
 .contentLeft button:hover {
-  background: pink;
+  background: var(--gray-lightest);
   cursor: pointer;
 }
 
 .sorting button:active,
 .contentLeft button:active {
-  background: var(--gray-lightest);
+  background: var(--gray-lighter);
 }
 
 .contentRight {
