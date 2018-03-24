@@ -430,14 +430,46 @@ border: 1px solid transparent;
 
 .contentRight {
   grid-area: auto / span 2;
-  padding: 10rem;
-  border: 1px solid orange;
+  padding: calc(var(--space)*1.5)
+           0
+           calc(var(--space)*1.5)
+           calc(var(--space)*1.5);
+  font-size: 5vw;
+  border: 1px solid transparent;
+}
+
+.contentRight table {
+  width: 100%;
+  padding: var(--space)
+           calc(var(--space)*0.5)
+           var(--space)
+           var(--space);
+  font-family: var(--main-font-family);
+  font-weight: var(--normal);
+  text-align: left;
+  text-transform: capitalize;
+  text-decoration: none;
+  letter-spacing: 0.15rem;
+  color: var(--almost-black);
+  border: 1px solid transparent;
+}
+
+.contentRight table thead tr th {
+  padding: calc(var(--space)*0.5);
+  font-size: inherit;
+  background: var(--gray-lightest)
+}
+
+.contentRight table tbody td {
+  padding: calc(var(--space)*0.25);
+  font-size: 1vw;
+  border-bottom: 0.001rem solid var(--gray-lightest);
 }
 
 .contentLeft {
   grid-area: auto / span 1;
   padding-right: calc(var(--space)*20);
-  border: 1px solid orange;
+  border: 1px solid transparent;
   font-family: var(--main-font-family);
   font-size: 3vw;
   font-weight: var(--normal);
@@ -466,4 +498,10 @@ border: 1px solid transparent;
 .sortingResults ul {
   margin-right: 0;
   border: 1px solid transparent;
+}
+
+.adj-ul {
+  margin-top: -5rem;
+  padding-top: -5rem;
+  border: 1px solid red;
 }

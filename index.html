@@ -75,15 +75,22 @@
           <button type="button" onclick="sortAllResults()">show all</button>
         </li>
         <li>
-          <button type="button" onclick="sortAscResults()">show by score</button>
+          <button type="button" onclick="sortMatch1()">match 1</button>
         </li>
         <li>
-          <button type="button" onclick="sortFemalesResults()">show females</button>
+          <button type="button" onclick="sortMatch2()">match 2</button>
         </li>
         <li>
-          <button type="button" onclick="sortMalesResults()">show males</button>
+          <button type="button" onclick="sortMatch3()">match 3</button>
+        </li>
+        <li>
+          <button type="button" onclick="sortMatch4()">match 4</button>
+        </li>
+        <li>
+          <button type="button" onclick="sortMatch5()">match 5</button>
         </li>
       </ul>
+
     </div>
 
     <div class="contentLeft">
@@ -93,16 +100,18 @@
           <h3>register results</h3>
           <label for="selMatch">Match:</label>
           <select class="" id="selMatch">
-            <option value="match1">Match 1</option>
-            <option value="match2">Match 2</option>
-            <option value="match3">Match 3</option>
-            <option value="match4">Match 4</option>
-            <option value="match5">Match 5</option>
+            <option value="blank match">Choose match ---</option>
+            <option value="match 1">Match 1</option>
+            <option value="match 2">Match 2</option>
+            <option value="match 3">Match 3</option>
+            <option value="match 4">Match 4</option>
+            <option value="match 5">Match 5</option>
           </select>
         </div>
 
         <label for="selName">Player:</label>
         <select id="selName">
+          <option value="blank name">Choose player ---</option>
           <!-- insert via JS -->
         </select>
 
@@ -118,8 +127,17 @@
 
     <div class="contentRight">
 
-      <table id="resultsTable">
-        <!-- insert via JS -->
+      <table>
+        <thead>
+          <tr>
+            <th>Match</th>
+            <th>Player</th>
+            <th>Score</th>
+          </tr>
+        </thead>
+        <tbody id="resultsTable">
+          <!-- insert via JS -->
+        </tbody>
       </table>
     </div>
   </div>

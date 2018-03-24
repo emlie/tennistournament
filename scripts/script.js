@@ -1,15 +1,20 @@
 // get HTML elements
 var main = document.getElementById("main");
+
 var infoMainContent = document.getElementById("infoMainContent");
+
 var resultsMainContent = document.getElementById("resultsMainContent");
 var resultsTable = document.getElementById("resultsTable");
 var regResults = document.getElementById("regResults");
 var regResultsInp = document.getElementById("regResultsInp");
 var selMatch = document.getElementById("selMatch");
 var selName = document.getElementById("selName");
+
 var playersMainContent = document.getElementById("playersMainContent");
 var playersGallery = document.getElementById("playersGallery");
+
 var contactMainContent = document.getElementById("contactMainContent");
+
 
 // get databases from FB
 var database = firebase.database();
@@ -30,6 +35,7 @@ function getPlayers(snapshot) {
   var playerClub = playerInfo.club;
   var playerImg = playerInfo.img;
 
+  // insert players
   playersGallery.innerHTML += `
   <article class="content">
     <img src="images/${playerImg}">
@@ -39,26 +45,51 @@ function getPlayers(snapshot) {
   </article>
   `;
 
-  selName.innerHTML += `<option value="${selName}">${playerName}</option>`;
+  // insert players into <option>
+  selName.innerHTML += `<option value="${playerName}">${playerName}</option>`;
 };
 
-// listener function: get data from registered result
+
+// listener function: get data from submitted form
 function regNewResults(event) {
   console.log("testing regResults");
   event.preventDefault();
 
+  var chosenPlayer = selName.value;
+  var chosenMatch = selMatch.value;
   var regPoints = points.value;
-  var theMatch = selMatch.value;
-  var thePlayer = selName.value;
 
   var newResult = {
-    "player" : thePlayer,
-    "match" : theMatch,
-    "score" : points.value
+    "player" : chosenPlayer,
+    "match" : chosenMatch,
+    "score" : regPoints
   };
 
   resultsDB.push(newResult);
+
+  // reset form
+  selMatch.value = "blank match";
+  selName.value = "blank name";
   points.value = "";
+};
+
+
+// listener function: get data from resultsDB
+function getResults(snapshot) {
+  console.log("testing getResults");
+
+  theResult = snapshot.val();
+  thePlayer = theResult.player;
+  theMatch = theResult.match;
+  theScore = theResult.score;
+
+  resultsTable.innerHTML += `
+  <tr>
+    <td>${theMatch}</td>
+    <td>${thePlayer}</td>
+    <td>${theScore}</td>
+  </tr>
+  `;
 };
 
 
@@ -92,18 +123,53 @@ function showContact() {
 // listener functions for sorting results
 function sortAllResults() {
   console.log("testing sortAllResults");
+  resultsTable.innerHTML = "";
+  resultsDB.on("child_added", getResults);
 };
 
 function sortAscResults() {
   console.log("testing sortAscResults");
+  resultsTable.innerHTML = "";
 };
 
-function sortFemalesResults() {
-  console.log("testing sortFemalesResults");
+function sortMatch1() {
+  console.log("testing sortAscResults");
+  resultsTable.innerHTML = "";
+  resultsDB.orderByChild("match")
+           .equalTo("match 1")
+           .on("child_added", getResults);
 };
 
-function sortMalesResults() {
-  console.log("testing sortMalesResults");
+function sortMatch2() {
+  console.log("testing sortAscResults");
+  resultsTable.innerHTML = "";
+  resultsDB.orderByChild("match")
+           .equalTo("match 2")
+           .on("child_added", getResults);
+};
+
+function sortMatch3() {
+  console.log("testing sortAscResults");
+  resultsTable.innerHTML = "";
+  resultsDB.orderByChild("match")
+           .equalTo("match 3")
+           .on("child_added", getResults);
+};
+
+function sortMatch4() {
+  console.log("testing sortAscResults");
+  resultsTable.innerHTML = "";
+  resultsDB.orderByChild("match")
+           .equalTo("match 4")
+           .on("child_added", getResults);
+};
+
+function sortMatch5() {
+  console.log("testing sortAscResults");
+  resultsTable.innerHTML = "";
+  resultsDB.orderByChild("match")
+           .equalTo("match 5")
+           .on("child_added", getResults);
 };
 
 
@@ -136,3 +202,4 @@ function sortMales() {
 // register listener functions
 regResults.onsubmit = regNewResults;
 playersDB.on("child_added", getPlayers);
+resultsDB.on("child_added", getResults);
