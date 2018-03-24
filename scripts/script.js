@@ -35,7 +35,6 @@ function getPlayers(snapshot) {
     <img src="images/${playerImg}">
     <h3>${playerName}</h3>
     <p>${playerBday}</p>
-    <p>${playerGender}</p>
     <p>${playerClub}</p>
   </article>
   `;
@@ -90,7 +89,7 @@ function showContact() {
 
 
 // listener functions for sorting
-function sortAll() {
+function sortAllPlayers() {
   console.log("testing sortAll");
   playersGallery.innerHTML = "";
   playersDB.on("child_added", getPlayers);
