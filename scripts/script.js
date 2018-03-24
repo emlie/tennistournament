@@ -63,6 +63,7 @@ function regNewResults(event) {
 
 
 
+
 // listener functions for showing elements
 function showInfo() {
   console.log("testing showInfo");
@@ -88,7 +89,25 @@ function showContact() {
 };
 
 
-// listener functions for sorting
+// listener functions for sorting results
+function sortAllResults() {
+  console.log("testing sortAllResults");
+};
+
+function sortAscResults() {
+  console.log("testing sortAscResults");
+};
+
+function sortFemalesResults() {
+  console.log("testing sortFemalesResults");
+};
+
+function sortMalesResults() {
+  console.log("testing sortMalesResults");
+};
+
+
+// listener functions for sorting players
 function sortAllPlayers() {
   console.log("testing sortAll");
   playersGallery.innerHTML = "";
@@ -116,5 +135,4 @@ function sortMales() {
 
 // register listener functions
 regResults.onsubmit = regNewResults;
-
 playersDB.on("child_added", getPlayers);
