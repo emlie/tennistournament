@@ -1,27 +1,27 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title>Tennis Tournament</title>
-    <link rel="stylesheet" href="css/style.css">
-    <link href="https://fonts.googleapis.com/css?family=family%3DLora%7CMontserrat%7COpen%2BSans%7CPlayfair%2BDisplay" rel="stylesheet">
-  </head>
-  <body>
+<head>
+  <meta charset="utf-8">
+  <title>Tennis Tournament</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link href="https://fonts.googleapis.com/css?family=family%3DLora%7CMontserrat%7COpen%2BSans%7CPlayfair%2BDisplay" rel="stylesheet">
+</head>
+<body>
 
 
-    <script src="https://www.gstatic.com/firebasejs/4.12.0/firebase.js"></script>
-    <script>
-      // Initialize Firebase
-      var config = {
-        apiKey: "AIzaSyBHFVN7vwJ1KvJ31qjvBhwTepjPDmLQiqs",
-        authDomain: "tennis-tournament-4877d.firebaseapp.com",
-        databaseURL: "https://tennis-tournament-4877d.firebaseio.com",
-        projectId: "tennis-tournament-4877d",
-        storageBucket: "tennis-tournament-4877d.appspot.com",
-        messagingSenderId: "233196095242"
-      };
-      firebase.initializeApp(config);
-    </script>
+  <script src="https://www.gstatic.com/firebasejs/4.12.0/firebase.js"></script>
+  <script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyBHFVN7vwJ1KvJ31qjvBhwTepjPDmLQiqs",
+    authDomain: "tennis-tournament-4877d.firebaseapp.com",
+    databaseURL: "https://tennis-tournament-4877d.firebaseio.com",
+    projectId: "tennis-tournament-4877d",
+    storageBucket: "tennis-tournament-4877d.appspot.com",
+    messagingSenderId: "233196095242"
+  };
+  firebase.initializeApp(config);
+  </script>
 
 
 
@@ -54,152 +54,152 @@
   </header>
 
 
-<main id="main">
+  <main id="main">
 
-  <div id="infoMainContent" class="mainContent">
-    <h2 class="adj-h-full-width">Information</h2>
-    <div class="adj">
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-      </p>
-    </div>
-  </div>
-
-  <div id="resultsMainContent" class="mainContent">
-    <h2>results</h2>
-
-    <div class="sorting sortingResults">
-      <ul>
-        <li>
-          <button type="button" onclick="sortAllResults()">show all</button>
-        </li>
-        <li>
-          <button type="button" onclick="sortMatch1()">match 1</button>
-        </li>
-        <li>
-          <button type="button" onclick="sortMatch2()">match 2</button>
-        </li>
-        <li>
-          <button type="button" onclick="sortMatch3()">match 3</button>
-        </li>
-        <li>
-          <button type="button" onclick="sortMatch4()">match 4</button>
-        </li>
-        <li>
-          <button type="button" onclick="sortMatch5()">match 5</button>
-        </li>
-      </ul>
-
+    <div id="infoMainContent" class="mainContent">
+      <h2 class="adj-h-full-width">Information</h2>
+      <div class="adj">
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        </p>
+      </div>
     </div>
 
-    <div class="contentLeft">
-      <form id="regResults">
+    <div id="resultsMainContent" class="mainContent">
+      <h2>results</h2>
 
-        <h3 class="extra-bottom-space">register results</h3>
-        <label for="selMatch">Match:</label>
-        <select class="" id="selMatch">
-          <option value="blank match">Choose match ---</option>
-          <option value="match 1">Match 1</option>
-          <option value="match 2">Match 2</option>
-          <option value="match 3">Match 3</option>
-          <option value="match 4">Match 4</option>
-          <option value="match 5">Match 5</option>
-        </select>
+      <div class="sorting sortingResults">
+        <ul>
+          <li>
+            <button type="button" onclick="sortAllResults()">show all</button>
+          </li>
+          <li>
+            <button type="button" onclick="sortMatch1()">match 1</button>
+          </li>
+          <li>
+            <button type="button" onclick="sortMatch2()">match 2</button>
+          </li>
+          <li>
+            <button type="button" onclick="sortMatch3()">match 3</button>
+          </li>
+          <li>
+            <button type="button" onclick="sortMatch4()">match 4</button>
+          </li>
+          <li>
+            <button type="button" onclick="sortMatch5()">match 5</button>
+          </li>
+        </ul>
 
-        <label for="selPlayer">Player:</label>
-        <select id="selPlayer">
-          <option value="blank name">Choose player ---</option>
-          <!-- insert via JS -->
-        </select>
+      </div>
 
-        <label for="points">Points:</label>
-        <input type="number" id="points">
+      <div class="contentLeft">
+        <form id="regResults">
 
-        <div class="extra-top-space">
-          <button type="submit">submit</button>
-        </div>
+          <h3 class="extra-bottom-space">register results</h3>
+          <label for="selMatch">Match:</label>
+          <select class="" id="selMatch">
+            <option value="blank match">Choose match ---</option>
+            <option value="match 1">Match 1</option>
+            <option value="match 2">Match 2</option>
+            <option value="match 3">Match 3</option>
+            <option value="match 4">Match 4</option>
+            <option value="match 5">Match 5</option>
+          </select>
 
-      </form>
+          <label for="selPlayer">Player:</label>
+          <select id="selPlayer">
+            <option value="blank name">Choose player ---</option>
+            <!-- insert via JS -->
+          </select>
+
+          <label for="points">Points:</label>
+          <input type="number" id="points">
+
+          <div class="extra-top-space">
+            <button type="submit">submit</button>
+          </div>
+
+        </form>
+      </div>
+
+      <div class="contentRight">
+        <table>
+          <thead>
+            <tr>
+              <th>Match</th>
+              <th>Player</th>
+              <th>Score</th>
+            </tr>
+          </thead>
+          <tbody id="resultsTable">
+            <!-- insert via JS -->
+          </tbody>
+        </table>
+      </div>
     </div>
 
-    <div class="contentRight">
-      <table>
-        <thead>
-          <tr>
-            <th>Match</th>
-            <th>Player</th>
-            <th>Score</th>
-          </tr>
-        </thead>
-        <tbody id="resultsTable">
-          <!-- insert via JS -->
-        </tbody>
-      </table>
+    <div id="playersMainContent" class="mainContent">
+      <h2>players</h2>
+      <div class="sorting">
+        <ul>
+          <li>
+            <button type="button" onclick="sortAllPlayers()">show all</button>
+          </li>
+          <li>
+            <button type="button" onclick="sortFemales()">show females</button>
+          </li>
+          <li>
+            <button type="button" onclick="sortMales()">show males</button>
+          </li>
+        </ul>
+      </div>
+      <div id="playersGallery" class="mainContent">
+        <!-- insert via JS -->
+      </div>
+
     </div>
-  </div>
 
-  <div id="playersMainContent" class="mainContent">
-   <h2>players</h2>
-   <div class="sorting">
-     <ul>
-       <li>
-         <button type="button" onclick="sortAllPlayers()">show all</button>
-       </li>
-       <li>
-         <button type="button" onclick="sortFemales()">show females</button>
-       </li>
-       <li>
-         <button type="button" onclick="sortMales()">show males</button>
-       </li>
-     </ul>
-   </div>
-   <div id="playersGallery" class="mainContent">
-     <!-- insert via JS -->
-   </div>
+    <div id="contactMainContent" class="mainContent">
+      <h2 class="adj-h-full-width">Contact</h2>
+      <div class="adj">
+        <h3>Firstname Surname</h3>
+        <p>
+          Mail: mail@something.com
+          <br />
+          Phone: 12 34 56 78
+        </p>
+      </div>
+    </div>
 
-  </div>
-
-  <div id="contactMainContent" class="mainContent">
-   <h2 class="adj-h-full-width">Contact</h2>
-   <div class="adj">
-     <h3>Firstname Surname</h3>
-     <p>
-       Mail: mail@something.com
-       <br />
-       Phone: 12 34 56 78
-     </p>
-   </div>
-  </div>
-
-</main>
+  </main>
 
 
-<footer>
-  <p>
-    <a href="#up"><img src="icons/up-arrow.svg" alt="up"></a>
-  </p>
-  <p>
-    Icons made by <a href="https://www.flaticon.com/authors/lucy-g">Lucy G</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a>
-  </p>
-  <p>
-    Hero photo by <a href="https://unsplash.com/@christopher__burns">Christopher Burns</a> on <a href="https://unsplash.com/photos/YSfTcJZR-ws">Unslpash</a> and <a href="https://unsplash.com/@flovayn">Florian van Duyn</a> on <a href="https://unsplash.com/photos/FhcMJ-_fyUE?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
-  </p>
-  <p>
-    Photo of players by <a href="https://unsplash.com/@designbykiki">Kiki Siepel</a> on <a href="https://unsplash.com/photos/BEwxLSN_bKU?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unslpash</a> and <a href="https://unsplash.com/@flovayn">Florian van Duyn</a> on <a href="https://unsplash.com/photos/FhcMJ-_fyUE?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
-  </p>
-  <p>
-    Website created by Mia Elisenberg for IT1 Innlevering – Dynamiske nettsider 2018
-  </p>
-</footer>
+  <footer>
+    <p>
+      <a href="#up"><img src="icons/up-arrow.svg" alt="up"></a>
+    </p>
+    <p>
+      Icons made by <a href="https://www.flaticon.com/authors/lucy-g">Lucy G</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a>
+    </p>
+    <p>
+      Hero photo by <a href="https://unsplash.com/@christopher__burns">Christopher Burns</a> on <a href="https://unsplash.com/photos/YSfTcJZR-ws">Unslpash</a> and <a href="https://unsplash.com/@flovayn">Florian van Duyn</a> on <a href="https://unsplash.com/photos/FhcMJ-_fyUE?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+    </p>
+    <p>
+      Photo of players by <a href="https://unsplash.com/@designbykiki">Kiki Siepel</a> on <a href="https://unsplash.com/photos/BEwxLSN_bKU?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unslpash</a> and <a href="https://unsplash.com/@flovayn">Florian van Duyn</a> on <a href="https://unsplash.com/photos/FhcMJ-_fyUE?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+    </p>
+    <p>
+      Website created by Mia Elisenberg for IT1 Innlevering – Dynamiske nettsider 2018
+    </p>
+  </footer>
 
 
+  
 
+  <!-- own external js -->
+  <script src="scripts/script.js"></script>
 
-<!-- own external js -->
-<script src="scripts/script.js"></script>
+  <!-- smooth scroll js module: https://github.com/zengabor/zenscroll -->
+  <script src="scripts/zenscroll-latest/zenscroll-min.js"></script>
 
-<!-- smooth scroll js module: https://github.com/zengabor/zenscroll -->
-<script src="scripts/zenscroll-latest/zenscroll-min.js"></script>
-
-  </body>
+</body>
 </html>
