@@ -304,6 +304,10 @@ footer img {
   margin-top: calc(var(--space)*1.2);
 }
 
+.extra-bottom-space {
+  margin-bottom: calc(var(--space)*1.5);
+}
+
 .adj {
   grid-area: auto / span 2;
   padding: calc(var(--space)*1.5);
