@@ -8,7 +8,7 @@ var resultsTable = document.getElementById("resultsTable");
 var regResults = document.getElementById("regResults");
 var regResultsInp = document.getElementById("regResultsInp");
 var selMatch = document.getElementById("selMatch");
-var selName = document.getElementById("selName");
+var selPlayer = document.getElementById("selPlayer");
 
 var playersMainContent = document.getElementById("playersMainContent");
 var playersGallery = document.getElementById("playersGallery");
@@ -46,7 +46,7 @@ function getPlayers(snapshot) {
   `;
 
   // insert players into <option>
-  selName.innerHTML += `<option value="${playerName}">${playerName}</option>`;
+  selPlayer.innerHTML += `<option value="${playerName}">${playerName}</option>`;
 };
 
 
@@ -55,7 +55,7 @@ function regNewResults(event) {
   console.log("testing regResults");
   event.preventDefault();
 
-  var chosenPlayer = selName.value;
+  var chosenPlayer = selPlayer.value;
   var chosenMatch = selMatch.value;
   var regPoints = points.value;
 
@@ -69,7 +69,7 @@ function regNewResults(event) {
 
   // reset form
   selMatch.value = "blank match";
-  selName.value = "blank name";
+  selPlayer.value = "blank name";
   points.value = "";
 };
 
