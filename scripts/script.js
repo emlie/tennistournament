@@ -1,12 +1,15 @@
 // get HTML elements
 var main = document.getElementById("main");
-var playersMainContent = document.getElementById("playersMainContent");
-var playersGallery = document.getElementById("playersGallery");
+var infoMainContent = document.getElementById("infoMainContent");
+var resultsMainContent = document.getElementById("resultsMainContent");
 var resultsTable = document.getElementById("resultsTable");
 var regResults = document.getElementById("regResults");
 var regResultsInp = document.getElementById("regResultsInp");
 var selMatch = document.getElementById("selMatch");
 var selName = document.getElementById("selName");
+var playersMainContent = document.getElementById("playersMainContent");
+var playersGallery = document.getElementById("playersGallery");
+var contactMainContent = document.getElementById("contactMainContent");
 
 // get databases from FB
 var database = firebase.database();
@@ -61,22 +64,32 @@ function regNewResults(event) {
 
 
 
-// listener functions for sorting
+// listener functions for showing elements
 function showInfo() {
   console.log("testing showInfo");
+  /* the normal JS to scroll to and element:
+  playersMainContent.scrollIntoView();
+  */
+  // use zenscroll to smooth scroll to and element and center it in the view:
+  zenscroll.center(infoMainContent);
 };
 
 function showPlayers() {
   console.log("testing showPlayers");
-
-/*var x = playersMainContent;
-  if (playersMainContent.style.display === "none") {
-      playersMainContent.style.display == "block";
-  } else {
-      playersMainContent.style.display == "none";
-  }*/
+  zenscroll.center(playersMainContent);
 };
 
+function showResults() {
+  zenscroll.center(resultsMainContent);
+};
+
+function showContact() {
+  console.log("testing showContact");
+  zenscroll.to(contactMainContent);
+};
+
+
+// listener functions for sorting
 function sortAll() {
   console.log("testing sortAll");
   playersGallery.innerHTML = "";
@@ -97,14 +110,6 @@ function sortMales() {
   playersDB.orderByChild("gender")
            .equalTo("male")
            .on("child_added", getPlayers);
-};
-
-function showResults() {
-  console.log("testing showResults");
-};
-
-function showContact() {
-  console.log("testing showContact");
 };
 
 

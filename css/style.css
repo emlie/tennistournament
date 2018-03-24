@@ -62,7 +62,7 @@ h1 {
   font-family: var(--heading-font-serif-2);
   font-size: 5vw;
   font-weight: var(--light);
-  text-align: right;
+  text-align: center;
   text-transform: none;
   text-decoration: none;
   letter-spacing: 0.25rem;
@@ -105,7 +105,6 @@ h3::first-letter {
 
 nav {
   width: 100%;
-  margin-top: -20rem;
   position: fixed;
   z-index: 10000;
   background: #fff;
@@ -181,13 +180,54 @@ nav button:active {
   background: var(--gray-lighter);
 }
 
+header {
+  width: 100%;
+  height: 40rem;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  background: no-repeat center 20% url("../images/christopher-burns-200321-unsplash.jpg");
+  filter: contrast(1.2);
+  background-size: cover;
+}
+
+header > div {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  padding-right: calc(var(--space)*6);
+  padding-top: calc(var(--space)*16);
+  text-align: right;
+}
+
+header > div p {
+  margin-top: calc(var(--space)*2);
+  font-family: var(--main-font-family);
+  font-size: 1vw;
+  font-weight: var(--light);
+  text-align: right;
+  text-transform: none;
+  text-decoration: none;
+  letter-spacing: 0.25rem;
+  color: var(--text-icons-white);
+}
+
+header > div img {
+  width: 4vw;
+  margin-top: calc(var(--space)*6);
+}
+
 main {
   display: grid;
   grid-template: auto / repeat(5, 1fr);
   grid-gap: 2rem;
   max-width: 85vw;
   height: auto;
-  margin: 20rem auto 1rem auto;
+  margin: 10rem auto 1rem auto;
   padding: 0;
   font-size: 6vw;
   transition: var(--smooth);
@@ -228,6 +268,7 @@ footer img {
 
 
 
+
 #playersMainContent {
   display: display;
 }
@@ -249,8 +290,20 @@ footer img {
 
 
 
+.overlay {
+  background-color: rgba(0, 0, 0, 0);
+  width: 100%;
+  height: 100%;
+  position: relative;
+  z-index: 1;
+}
+
 .extra-top-space {
   margin-top: calc(var(--space)*1.2);
+}
+
+.full-length {
+  grid-area: auto / span 2;
 }
 
 .content {
@@ -291,10 +344,25 @@ grid-template: auto / repeat(3, 1fr);
 grid-gap: 2rem;
 max-width: 85vw;
 height: auto;
-margin-bottom: 10rem;
+margin-bottom: 20rem;
 font-size: 6vw;
 transition: var(--smooth);
-border: 1px solid transparent;
+border: 1px solid cyan;
+}
+
+.mainContent p {
+  font-family: var(--main-font-family);
+  font-size: 0.9vw;
+  font-weight: var(--normal);
+  text-align: justify;
+  text-transform: none;
+  text-decoration: none;
+  letter-spacing: 0.15rem;
+  color: var(--almost-black);
+}
+
+.mainContent:last-child {
+  margin-bottom: 0;
 }
 
 .sorting {
