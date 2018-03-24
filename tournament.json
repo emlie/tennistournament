@@ -13,6 +13,18 @@
         "club" : "Blodelsheim",
         "img" : "kiki-siepel-412333-unsplash.jpg"
       },
+      "Cathy Reinlen" : {
+        "bday" : "28.01.01",
+        "gender" : "female",
+        "club" : "Colmar",
+        "img" : "kiki-siepel-412333-unsplash.jpg"
+      },
+      "Maëlys Manzoni" : {
+        "bday" : "21.07.01",
+        "gender" : "female",
+        "club" : "Hartmannswiller",
+        "img" : "kiki-siepel-412333-unsplash.jpg"
+      },
       "Valentin Apaydin" : {
         "bday" : "20.04.00",
         "gender" : "male",
@@ -23,6 +35,18 @@
         "bday" : "25.07.00",
         "gender" : "male",
         "club" : "Bergholtz",
+        "img" : "florian-van-duyn-327042-unsplash.jpg"
+      },
+      "Hugo Guerrieri" : {
+        "bday" : "21.07.01",
+        "gender" : "male",
+        "club" : "Strasbourg",
+        "img" : "florian-van-duyn-327042-unsplash.jpg"
+      },
+      "Hugo Giegelmann" : {
+        "bday" : "30.11.01",
+        "gender" : "male",
+        "club" : "Blodelsheim",
         "img" : "florian-van-duyn-327042-unsplash.jpg"
       }
     }
