@@ -107,7 +107,7 @@ function showInfo() {
 
 function showPlayers() {
   console.log("testing showPlayers");
-  zenscroll.center(playersMainContent);
+  zenscroll.to(playersMainContent);
 };
 
 function showResults() {
