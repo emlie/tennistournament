@@ -78,10 +78,10 @@ function regNewResults(event) {
 function getResults(snapshot) {
   console.log("testing getResults");
 
-  theResult = snapshot.val();
-  thePlayer = theResult.player;
-  theMatch = theResult.match;
-  theScore = theResult.score;
+  var theResult = snapshot.val();
+  var thePlayer = theResult.player;
+  var theMatch = theResult.match;
+  var theScore = theResult.score;
 
   resultsTable.innerHTML += `
   <tr>
