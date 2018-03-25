@@ -1,0 +1,116 @@
+{
+  "theTournament" : {
+    "players" : {
+      "Cathy Reinlen" : {
+        "bday" : "28.01.01",
+        "club" : "Colmar",
+        "gender" : "female",
+        "img" : "kiki-siepel-412333-unsplash.jpg"
+      },
+      "Eva Albini" : {
+        "bday" : "12.03.01",
+        "club" : "Blodelsheim",
+        "gender" : "female",
+        "img" : "kiki-siepel-412333-unsplash.jpg"
+      },
+      "Hugo Giegelmann" : {
+        "bday" : "30.11.01",
+        "club" : "Blodelsheim",
+        "gender" : "male",
+        "img" : "florian-van-duyn-327042-unsplash.jpg"
+      },
+      "Hugo Guerrieri" : {
+        "bday" : "21.07.01",
+        "club" : "Strasbourg",
+        "gender" : "male",
+        "img" : "florian-van-duyn-327042-unsplash.jpg"
+      },
+      "Hugo Marmonier" : {
+        "bday" : "25.07.00",
+        "club" : "Bergholtz",
+        "gender" : "male",
+        "img" : "florian-van-duyn-327042-unsplash.jpg"
+      },
+      "Marine Antunes" : {
+        "bday" : "27.08.01",
+        "club" : "Jungholtz",
+        "gender" : "female",
+        "img" : "kiki-siepel-412333-unsplash.jpg"
+      },
+      "Maëlys Manzoni" : {
+        "bday" : "21.07.01",
+        "club" : "Hartmannswiller",
+        "gender" : "female",
+        "img" : "kiki-siepel-412333-unsplash.jpg"
+      },
+      "Valentin Apaydin" : {
+        "bday" : "20.04.00",
+        "club" : "Colmar",
+        "gender" : "male",
+        "img" : "florian-van-duyn-327042-unsplash.jpg"
+      }
+    },
+    "results" : {
+      "-L8NdbuRLIJjfJlx_yyZ" : {
+        "match" : "match 1",
+        "player" : "Hugo Guerrieri",
+        "score" : "2"
+      },
+      "-L8NddR9IPaR44YOxhIN" : {
+        "match" : "match 1",
+        "player" : "Hugo Giegelmann",
+        "score" : "1"
+      },
+      "-L8NdfbiwHm_t7FV5vwM" : {
+        "match" : "match 1",
+        "player" : "Eva Albini",
+        "score" : "2"
+      },
+      "-L8Ndi134CNlozkrhMRu" : {
+        "match" : "match 1",
+        "player" : "Maëlys Manzoni",
+        "score" : "1"
+      },
+      "-L8NdjQP15z2cLN5JE5F" : {
+        "match" : "match 3",
+        "player" : "Eva Albini",
+        "score" : "4"
+      },
+      "-L8Ndl7ZjdVKs82Q_5U1" : {
+        "match" : "match 2",
+        "player" : "Marine Antunes",
+        "score" : "3"
+      },
+      "-L8Ndnm5M80ZsuS3nfGy" : {
+        "match" : "match 2",
+        "player" : "Eva Albini",
+        "score" : "1"
+      },
+      "-L8NdpOsjBLwWtuhEXMN" : {
+        "match" : "match 5",
+        "player" : "Valentin Apaydin",
+        "score" : "3"
+      },
+      "-L8NdrzHvXKUMDSn1dxG" : {
+        "match" : "match 5",
+        "player" : "Hugo Marmonier",
+        "score" : "4"
+      },
+      "-L8NfEL3J7UfQ70zA5uj" : {
+        "match" : "match 2",
+        "player" : "Hugo Giegelmann",
+        "score" : "2"
+      },
+      "-L8OQ-TnomAyThXGzjsY" : {
+        "match" : "match 5",
+        "player" : "Hugo Guerrieri",
+        "score" : "3"
+      },
+      "-L8OQ5q0v87kdj3EX27h" : {
+        "match" : "match 5",
+        "player" : "Hugo Guerrieri",
+        "score" : "5"
+      }
+    }
+  }
+}
