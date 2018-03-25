@@ -290,12 +290,7 @@ footer img {
 
 
 
-#playersMainContent {
-  display: display;
-}
-
 #playersGallery {
-  display: display;
   grid-area: auto / span 5;
   grid-template: auto / repeat(4, 1fr);
 }
