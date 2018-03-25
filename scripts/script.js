@@ -24,7 +24,7 @@ var resultsDB = database.ref("theTournament/results");
 
 
 
-// listener function: get data from pre-existing database "players"
+// listener function: get and display data from pre-existing database "players"
 function getPlayers(snapshot) {
   console.log("testing getPlayers");
 
@@ -35,7 +35,7 @@ function getPlayers(snapshot) {
   var playerClub = playerInfo.club;
   var playerImg = playerInfo.img;
 
-  // insert players
+  // display players
   playersGallery.innerHTML += `
   <article class="content">
     <img src="images/${playerImg}">
@@ -45,12 +45,12 @@ function getPlayers(snapshot) {
   </article>
   `;
 
-  // insert players into <option>
+  // insert players into form
   selPlayer.innerHTML += `<option value="${playerName}">${playerName}</option>`;
 };
 
 
-// listener function: get data from submitted form
+// listener function: push data from submitted form to new database "results"
 function regNewResults(event) {
   console.log("testing regResults");
   event.preventDefault();
@@ -59,12 +59,14 @@ function regNewResults(event) {
   var chosenMatch = selMatch.value;
   var regPoints = points.value;
 
+  // create object for resultsDB
   var newResult = {
     "player" : chosenPlayer,
     "match" : chosenMatch,
     "score" : regPoints
   };
 
+  // push new object to resultsDB
   resultsDB.push(newResult);
 
   // reset form
@@ -74,7 +76,7 @@ function regNewResults(event) {
 };
 
 
-// listener function: get data from resultsDB
+// listener function: get and display data from resultsDB
 function getResults(snapshot) {
   console.log("testing getResults");
 
@@ -83,6 +85,7 @@ function getResults(snapshot) {
   var theMatch = theResult.match;
   var theScore = theResult.score;
 
+  // display data in table
   resultsTable.innerHTML += `
   <tr>
     <td>${theMatch}</td>
@@ -95,7 +98,7 @@ function getResults(snapshot) {
 
 
 
-// listener functions for showing elements
+// listener functions: showing (scrolling to) elements
 function showInfo() {
   console.log("testing showInfo");
   /* the normal JS to scroll to and element:
@@ -120,7 +123,7 @@ function showContact() {
 };
 
 
-// listener functions for sorting results
+// listener functions: sorting results
 function sortAllResults() {
   console.log("testing sortAllResults");
   resultsTable.innerHTML = "";
@@ -173,7 +176,7 @@ function sortMatch5() {
 };
 
 
-// listener functions for sorting players
+// listener functions: sorting players
 function sortAllPlayers() {
   console.log("testing sortAll");
   playersGallery.innerHTML = "";
