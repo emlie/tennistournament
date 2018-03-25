@@ -7,7 +7,7 @@ IT1 Innlevering – dynamiske nettsider
 <br>
 <br>
 ## Hva er hensikten til nettsiden?
-Hensikten med nettsiden er å kunne registrere en spiller til tennisterneringa, for så å kunne registrere turneringas resultater og sortere all dataen.
+Hensikten er å kunne se hvem som er med i tennisturneringa, registrere resultatene til hver match, og så sortere resultatene.
 <br>
 <br>
 ## Hva er datamodellen du bruker for databasene?
