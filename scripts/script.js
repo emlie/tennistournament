@@ -130,11 +130,6 @@ function sortAllResults() {
   resultsDB.on("child_added", getResults);
 };
 
-function sortAscResults() {
-  console.log("testing sortAscResults");
-  resultsTable.innerHTML = "";
-};
-
 function sortMatch1() {
   console.log("testing sortAscResults");
   resultsTable.innerHTML = "";
